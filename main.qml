@@ -3,7 +3,7 @@ import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 import QtQuick.Window 2.12
 import QtMultimedia
-import communication 1.0  // Import untuk SerialHandler
+import communication 1.0 
 
 
 
@@ -12,7 +12,7 @@ ApplicationWindow
     visible: true
     width: 600
     height: 400
-    title: "Fire Control System"
+    title: "Serial Communication"
 
     SerialHandler 
     {
@@ -62,8 +62,6 @@ ApplicationWindow
     Component.onCompleted: 
     {
         serialHandler.openConnection()
-        console.log("Menghubungkan ke " + networkHandler.ipAddress + ":" + networkHandler.port)
-        networkHandler.connectToDevice()
     }
 
     Rectangle
